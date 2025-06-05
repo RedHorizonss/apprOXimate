@@ -1,3 +1,10 @@
+//// This code is part of a Unity project that analyzes chemical formulas and calculates oxidation states based on user input or CSV files.
+// It uses Unity's UI system to allow users to input formulas, view results, and export data.
+// The code includes methods for parsing formulas, performing charge balance calculations, and exporting results to CSV files.
+// It also includes a CSVReader class to read chemical data from CSV files.
+// This code is made by Thomas Ashton (UCL IMD 2025)
+
+
 using System;
 using System.Collections.Generic;
 using System.IO;
