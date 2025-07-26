@@ -11,7 +11,7 @@ from decimal import Decimal, getcontext, ROUND_HALF_UP
 from fractions import Fraction
 
 class ApprOXimate:
-    def __init__(self, csv_file_path, verbose=False, precision=6):
+    def __init__(self, csv_file_path = "variable_ox_states_srps.csv", fixed_ox_states_path="fixed_ox_states.csv", verbose=False, precision=6):
         """
         Initialize the ApprOXimate class.
         
@@ -19,13 +19,14 @@ class ApprOXimate:
             csv_file_path (str): Path to the CSV file containing chemical data
             verbose (bool): Enable debug logging
             precision (int): Number of decimal places for precision (default: 6)
+            fixed_ox_states_path (str): Path to CSV file with fixed oxidation states (default: "fixed_ox_states.csv")
         """
         self.verbose = verbose
         self.precision = precision
         # Set decimal context for consistent precision
         getcontext().prec = precision + 2  # Extra precision for intermediate calculations
         getcontext().rounding = ROUND_HALF_UP
-        self.load_chemical_data(csv_file_path)
+        self.load_chemical_data(csv_file_path, fixed_ox_states_path)
     
     def precise_round(self, value, decimals=None):
         """
@@ -77,7 +78,7 @@ class ApprOXimate:
         if self.verbose:
             print(f"[DEBUG] {message}")
     
-    def load_chemical_data(self, csv_file_path):
+    def load_chemical_data(self, csv_file_path, fixed_ox_states_path):
         self.log(f"Loading chemical data from {csv_file_path}")
         df = pd.read_csv(csv_file_path)
         self.list1 = defaultdict(list)
@@ -96,16 +97,21 @@ class ApprOXimate:
         
         self.log(f"Loaded {len(self.list1)} elements with variable oxidation states")
         
-        # Fixed oxidation states for common elements ( I need to change this so it's defined in a csv file)
-        fixed_oxidation_states = {
-            'O': -2, 'Na': 1, 'Mg': 2, 'Al': 3, 'Si': 4, 'P': 5, 'S': 6,
-        }
+        # Load fixed oxidation states from CSV file
+
+        self.log(f"Loading fixed oxidation states from {fixed_ox_states_path}")
+        fixed_df = pd.read_csv(fixed_ox_states_path)
         
-        for element, ox in fixed_oxidation_states.items():
-            self.list2[element] = ox
+        for _, row in fixed_df.iterrows():
+            element = row['Element']
+            ox_state = int(row['Ox State'])
+            self.list2[element] = ox_state
+            self.log(f"Loaded fixed oxidation state: {element} = {ox_state}")
+        
+        self.log(f"Loaded {len(self.list2)} fixed oxidation states from CSV")
         
         # Remove fixed elements from variable list
-        for element in fixed_oxidation_states:
+        for element in self.list2.keys():
             if element in self.list1:
                 del self.list1[element]
                 self.log(f"Removed {element} from variable list (now fixed)")
