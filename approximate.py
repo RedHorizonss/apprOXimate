@@ -277,8 +277,17 @@ class ApprOXimate:
             
             self.log(f"Created new final state for {element}: ox={new_state[0]}, red={new_state[1]}, srp={new_state[2]}")
             
-    def charge_balance(self, formula):
-        """Main charge balancing function"""
+    def charge_balance(self, formula, return_dict=False):
+        """
+        Main charge balancing function
+        
+        Args:
+            formula: The chemical formula to balance
+            return_dict (bool): If True, return results as dictionary; if False, return as string
+        
+        Returns:
+            dict or str: Balanced chemical formula results
+        """
         self.log("=== Starting charge balance calculation ===")
         self.log(f"Input formula: {formula}")
         
@@ -291,8 +300,11 @@ class ApprOXimate:
         # Calculate final charge
         final_charge = self.calculate_final_charge(formula, element_states, balance_result)
         
-        # Build and return result string
-        result = self.build_result_string(formula, element_states, balance_result, final_charge)
+        # Build result based on return format preference
+        if return_dict:
+            result = self.build_result_dictionary(formula, element_states, balance_result, final_charge)
+        else:
+            result = self.build_result_string(formula, element_states, balance_result, final_charge)
         
         return result
 
@@ -425,6 +437,118 @@ class ApprOXimate:
             'final_ox': final_ox,
             'final_red': final_red
         }
+    
+    def build_result_dictionary(self, formula, element_states, balance_result, final_charge):
+        """
+        Build the final result as a dictionary
+        
+        Returns:
+            dict: Dictionary containing element information and final charge balance
+        """
+        self.log("\n=== Building result dictionary ===")
+        
+        element_with_final_lowest_srp = balance_result['element_with_final_lowest_srp']
+        final_delta_ox_max = balance_result['final_delta_ox_max']
+        final_charge_with_delta = balance_result['final_charge_with_delta']
+        element_quantity = balance_result['element_quantity']
+        final_ox = balance_result['final_ox']
+        final_red = balance_result['final_red']
+        
+        result_dict = {
+            'elements': {},
+            'final_charge_balance': self.precise_round(final_charge, 3)
+        }
+        
+        # Add fixed elements first
+        for element in sorted(formula.keys()):
+            if element in self.list2:
+                quantity = self.precise_round(formula[element], 3)
+                result_dict['elements'][element] = {
+                    'oxidation_state': self.list2[element],
+                    'quantity': quantity,
+                    'type': 'fixed'
+                }
+                self.log(f"Added fixed element to dict: {element} = {result_dict['elements'][element]}")
+        
+        # Add variable elements
+        for element in sorted(formula.keys()):
+            if element in element_states and element != element_with_final_lowest_srp:
+                current_state = element_states[element]['current_state']
+                quantity = self.precise_round(formula[element], 3)
+                result_dict['elements'][element] = {
+                    'oxidation_state': current_state[1],  # Using red value
+                    'quantity': quantity,
+                    'type': 'variable',
+                    'srp': current_state[2]
+                }
+                self.log(f"Added variable element to dict: {element} = {result_dict['elements'][element]}")
+        
+        # Handle element with lowest SRP (may have split quantities)
+        if element_with_final_lowest_srp and (self.safe_float_comparison(final_charge_with_delta, 0) or final_charge_with_delta > 0):
+            if not self.safe_float_comparison(final_delta_ox_max, 0):
+                if final_delta_ox_max != 0:  # Avoid division by zero
+                    adjusted_calc = Decimal(str(element_quantity)) * (Decimal(str(final_charge_with_delta)) / Decimal(str(final_delta_ox_max)))
+                    adjusted_quant = self.precise_round(adjusted_calc, 3)
+                    remaining_quant = self.precise_round(element_quantity - adjusted_quant, 3)
+                    
+                    # Create a list to store multiple oxidation states for this element
+                    element_states_list = []
+                    
+                    if adjusted_quant > 0:
+                        element_states_list.append({
+                            'oxidation_state': final_red,
+                            'quantity': adjusted_quant
+                        })
+                        self.log(f"Added adjusted lowest SRP element to dict: {element_with_final_lowest_srp} (red state)")
+                    
+                    if remaining_quant > 0:
+                        element_states_list.append({
+                            'oxidation_state': final_ox,
+                            'quantity': remaining_quant
+                        })
+                        self.log(f"Added remaining lowest SRP element to dict: {element_with_final_lowest_srp} (ox state)")
+                    
+                    result_dict['elements'][element_with_final_lowest_srp] = {
+                        'states': element_states_list,
+                        'total_quantity': self.precise_round(element_quantity, 3),
+                        'type': 'variable_split',
+                        'srp': self.precise_round([state[2] for state in element_states[element_with_final_lowest_srp]['all_states'] if state[1] == final_red][0], 3)
+                    }
+                else:
+                    # If delta is zero, use original quantity
+                    quantity = self.precise_round(element_quantity, 3)
+                    result_dict['elements'][element_with_final_lowest_srp] = {
+                        'oxidation_state': final_red,
+                        'quantity': quantity,
+                        'type': 'variable',
+                        'srp': self.precise_round([state[2] for state in element_states[element_with_final_lowest_srp]['all_states'] if state[1] == final_red][0], 3)
+                    }
+                    self.log(f"Added lowest SRP element to dict (delta zero): {element_with_final_lowest_srp}")
+            else:
+                # If no difference in oxidation states, just show the original quantity
+                quantity = self.precise_round(element_quantity, 3)
+                result_dict['elements'][element_with_final_lowest_srp] = {
+                    'oxidation_state': final_red,
+                    'quantity': quantity,
+                    'type': 'variable',
+                    'srp': self.precise_round([state[2] for state in element_states[element_with_final_lowest_srp]['all_states'] if state[1] == final_red][0], 3)
+                }
+                self.log(f"Added lowest SRP element to dict (no difference): {element_with_final_lowest_srp}")
+        
+        self.log(f"Final result dictionary: {result_dict}")
+        return result_dict
+    
+    def charge_balance_dict(self, formula):
+        """
+        Convenience method that returns results as a dictionary
+        
+        Args:
+            formula: The chemical formula to balance
+        
+        Returns:
+            dict: Balanced chemical formula results in dictionary format
+        """
+        return self.charge_balance(formula, return_dict=True)
     
     def build_result_string(self, formula, element_states, balance_result, final_charge):
         """Build the final result string"""
