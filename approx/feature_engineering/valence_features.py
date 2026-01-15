@@ -1,19 +1,18 @@
 from .base import FeatureModule
-from .utils import weighted_average
 from .registry import register_feature
+from .stats_expander import StatsExpander
 
-#Might be worth making the config, period and ion variables into a utility function?
 from mendeleev.econf import ElectronicConfiguration
+
 
 @register_feature
 class ValenceFeatureModule(FeatureModule):
 
     def get_valence(self, element, ox):
-        config = ElectronicConfiguration(
-            self.ptable.query("symbol == @element")["electronic_configuration"].values[0]
-        )
-        period = self.ptable.query("symbol == @element")["period"].values[0]
-        # Remove the number of electrons for the given element
+        row = self.ptable.query("symbol == @element").iloc[0]
+        config = ElectronicConfiguration(row["electronic_configuration"])
+        period = int(row["period"])
+
         ion = config.ionize(ox)
 
         s = ion.conf.get((period, "s"), 0)
@@ -25,35 +24,61 @@ class ValenceFeatureModule(FeatureModule):
 
     def get_unfilled(self, val):
         maxc = {"s": 2, "p": 6, "d": 10, "f": 14}
-        # Return a dictionary with the unfilled orbitals (valence - max configuration)
-        return {
-            orb: maxc[orb] - val[orb] for orb in maxc
-        } | {
+        return {orb: maxc[orb] - val[orb] for orb in maxc} | {
             "total": sum(maxc[o] - val[o] for o in maxc)
         }
+
+    def _expand_group(self, elems, prefix):
+        """
+        elems: list of (element, ox, qty)
+        prefix: 'all_' or 'var_'
+        """
+        out = {}
+
+        for channel in ["s", "p", "d", "f", "total"]:
+            # filled
+            values, weights = [], []
+            for el, ox, qty in elems:
+                v = self.get_valence(el, ox)[channel]
+                values.append(v)
+                weights.append(qty)
+
+            out |= StatsExpander.expand(
+                values,
+                weights,
+                prefix=f"{prefix}valence_{channel}_"
+            )
+
+            # unfilled
+            values, weights = [], []
+            for el, ox, qty in elems:
+                u = self.get_unfilled(self.get_valence(el, ox))[channel]
+                values.append(u)
+                weights.append(qty)
+
+            out |= StatsExpander.expand(
+                values,
+                weights,
+                prefix=f"{prefix}unfilled_valence_{channel}_"
+            )
+
+        return out
 
     def get_features(self, formula):
         result = self.approx.charge_balance(formula, return_format="dict")
         all_elems, var_elems = self.parse_result(result)
 
-        # ALL
-        all_val = weighted_average(all_elems, lambda e, ox: self.get_valence(e, ox))
-        all_unf = weighted_average(all_elems, lambda e, ox: self.get_unfilled(self.get_valence(e, ox)))
+        features = {}
 
-        all_val = {f"all_valence_{k}": v for k, v in all_val.items()}
-        all_unf = {f"all_unfilled_valence_{k}": v for k, v in all_unf.items()}
+        # ALL elements
+        features |= self._expand_group(all_elems, "all_")
 
-        # VAR
-        if len(var_elems) > 0:
-            var_val = weighted_average(var_elems, lambda e, ox: self.get_valence(e, ox))
-            var_unf = weighted_average(var_elems, lambda e, ox: self.get_unfilled(self.get_valence(e, ox)))
-
-            var_val = {f"var_valence_{k}": v for k, v in var_val.items()}
-            var_unf = {f"var_unfilled_valence_{k}": v for k, v in var_unf.items()}
+        # VAR elements
+        if var_elems:
+            features |= self._expand_group(var_elems, "var_")
         else:
-            # No variable oxidation states → return zeros
-            var_val = {f"var_valence_{k}": 0 for k in all_val}
-            var_unf = {f"var_unfilled_valence_{k}": 0 for k in all_unf}
-            
-        # Return a dictionary of all the variable calculated
-        return all_val | all_unf | var_val | var_unf
+            # if no variable elements → zero-fill var stats
+            for k, v in self._expand_group(all_elems, "all_").items():
+                features[k.replace("all_", "var_")] = 0.0
+
+        return features

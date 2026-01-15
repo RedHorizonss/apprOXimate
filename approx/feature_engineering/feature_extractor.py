@@ -1,6 +1,5 @@
 from .registry import FEATURE_REGISTRY
 
-
 class MaterialFeatureExtractor:
     """
     Main feature extraction engine.

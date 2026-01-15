@@ -4,3 +4,4 @@ from .ionic_radius_features import IonicRadiusModule
 from .layered_ox_features import TransitionMetalPotentialModule
 from .magnetic_moment_features import MagneticMomentModule
 from .electronegativity_features import ElectronegativityModule
+from .stats_expander import StatsExpander

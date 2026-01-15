@@ -346,7 +346,7 @@ def plot_individual_oxidation_states_ax(ax, analyzer, formula='NaMnO2', alkali_m
         ax.plot(values[:len(quantities)], quantities, 'o-', markersize=4,
                 color=colors[i], label=label, linewidth=2, alpha=0.6)
     
-    ax.set_ylim(-0.03, 1.003)
+    ax.set_ylim(-0.03, 3.003)
     ax.set_xlabel(f'Fractional amount of {alkali_metal}')
     ax.set_ylabel('Fractional amount for each oxidation state')
     ax.invert_xaxis()
