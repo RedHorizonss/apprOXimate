@@ -62,15 +62,14 @@ def generate_alkali_values(alkali_amount, interval, max_range):
 
 
 def get_colormap_colors(num_items, colormap='viridis', cmap_range=(0.1, 0.9)):
-    """Generate colors from a colormap within a specified range."""
-    cmap = plt.cm.get_cmap(colormap)
-    
+    cmap = plt.get_cmap(colormap)
     if num_items == 1:
         return [cmap((cmap_range[0] + cmap_range[1]) / 2)]
     else:
-        return [cmap(cmap_range[0] + (cmap_range[1] - cmap_range[0]) * i / (num_items - 1)) 
-                for i in range(num_items)]
-
+        return [
+            cmap(cmap_range[0] + (cmap_range[1] - cmap_range[0]) * i / (num_items - 1))
+            for i in range(num_items)
+        ]
 
 def setup_figure(figsize=(6, 5)):
     """Create figure and axes with standard settings."""
