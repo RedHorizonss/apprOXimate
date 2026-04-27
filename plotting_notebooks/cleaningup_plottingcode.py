@@ -8,6 +8,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
+from matplotlib import font_manager as fm
+
+for f in fm.findSystemFonts():
+    if "Aptos" in f:
+        fm.fontManager.addfont(f)
+
+
 # Set scientific publication style for Energy Storage plot
 plt.rcParams.update({
     # Font
@@ -17,15 +24,15 @@ plt.rcParams.update({
     'xtick.labelsize': 14,
     'ytick.labelsize': 14,
     'legend.fontsize': 14,
-    'font.family': ['Helvetica'],
+    'font.family': ['Aptos'],
     'mathtext.fontset': 'custom',
     'mathtext.it': 'Helvetica:italic',
     'mathtext.bf': 'Helvetica:bold',
 
     # Axes and lines
-    'lines.linewidth': 2,
-    'lines.markersize': 6,
-    'axes.linewidth': 2,
+    'lines.linewidth': 1.5,
+    'lines.markersize': 4,
+    'axes.linewidth': 1.5,
 
     # Ticks
     'xtick.direction': 'in',
@@ -34,14 +41,14 @@ plt.rcParams.update({
     'ytick.right': True,
     'xtick.minor.visible': True,
     'ytick.minor.visible': True,
-    'xtick.major.width': 2,
-    'ytick.major.width': 2,
-    'xtick.minor.width': 1,
-    'ytick.minor.width': 1,
-    'xtick.major.size': 6,
-    'ytick.major.size': 6,
-    'xtick.minor.size': 3,
-    'ytick.minor.size': 3,
+    'xtick.major.width': 1,
+    'ytick.major.width': 1,
+    'xtick.minor.width': 0.5,
+    'ytick.minor.width': 0.5,
+    'xtick.major.size': 4,
+    'ytick.major.size': 4,
+    'xtick.minor.size': 1.5,
+    'ytick.minor.size': 1.5,
 
     # Legend
     'legend.frameon': False,
@@ -345,7 +352,7 @@ def plot_individual_oxidation_states_ax(ax, analyzer, formula='NaMnO2', alkali_m
         ax.plot(values[:len(quantities)], quantities, 'o-', markersize=4,
                 color=colors[i], label=label, linewidth=2, alpha=0.6)
     
-    ax.set_ylim(-0.03, 3.003)
+    ax.set_ylim(-0.03, 1.003)
     ax.set_xlabel(f'Fractional amount of {alkali_metal}')
     ax.set_ylabel('Fractional amount for each oxidation state')
     ax.invert_xaxis()
