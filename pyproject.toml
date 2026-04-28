@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "approx"
+version = "0.1.0"
+description = "Charge balancing and oxidation-state-aware feature engineering for inorganic compositions."
+requires-python = ">=3.10"
+authors = [
+  { name = "Fay Timen" }
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "mendeleev>=0.17",
+  "pymatgen>=2024.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "jupyter",
+  "pytest>=8",
+  "tqdm",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["approx*"]
+
+[tool.setuptools.package-data]
+approx = ["data/*.csv"]

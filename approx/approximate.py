@@ -2,7 +2,7 @@
 # This class reads a CSV file containing chemical data, parses chemical formulas, and balances charges.
 # It supports both fixed and variable oxidation states, and provides detailed debug logging when verbose mode is enabled.
 # Translated from the original C++ code into python with now added functionality for interactive use in Jupyter notebooks. see approximate_widgets.ipynb for interactive use.
-#Added Alloy detection and handling functionality.
+# Added Alloy detection and handling functionality.
 # Fay Timen and Thomas Ashton 2025 python version 3.11
 
 import re
