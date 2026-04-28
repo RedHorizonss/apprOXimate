@@ -1,4 +1,5 @@
 from collections import defaultdict
+from functools import lru_cache
 import warnings
 from pymatgen.core import Element, Species
 
@@ -21,12 +22,28 @@ def weighted_average(element_list, value_fn):
     # Convert to averages
     return {k: totals[k] / total_qty for k in totals}
 
-def lookup_ionic_radius(element, ox, default=0.0):
+def _radius_to_pm(value):
+    if value is None:
+        return None
+
+    if hasattr(value, "to"):
+        return float(value.to("pm"))
+
+    numeric = float(value)
+
+    # Plain floats from pymatgen may come back in angstrom.
+    # Typical ionic radii in pm are ~50-200, while angstrom values are usually < 10.
+    if numeric < 10:
+        return numeric * 100.0
+
+    return numeric
+
+@lru_cache(maxsize=512)
+def _lookup_ionic_radius_cached(element, ox):
     """
     Safe ionic radius lookup:
     1. Try Element(element).ionic_radii[ox]  -> no warnings
     2. Try Species(element, ox).ionic_radius -> suppress warnings
-    3. Return default if missing
 
     Always returns a float in picometers (pm).
     """
@@ -35,10 +52,9 @@ def lookup_ionic_radius(element, ox, default=0.0):
         r = el.ionic_radii.get(ox, None)
         
         if r is not None:
-            # r may be FloatWithUnit or float
-            if hasattr(r, "to"):
-                return float(r.to("pm"))
-            return float(r)
+            normalized = _radius_to_pm(r)
+            if normalized is not None:
+                return normalized
     except Exception:
         pass
 
@@ -48,12 +64,19 @@ def lookup_ionic_radius(element, ox, default=0.0):
             r = Species(element, ox).ionic_radius
             
         if r is not None:
-            # again: r may be FloatWithUnit or float
-            if hasattr(r, "to"):
-                return float(r.to("pm")) #type: ignore[attr-defined]
-            return float(r)
+            normalized = _radius_to_pm(r)
+            if normalized is not None:
+                return normalized
     except Exception:
         pass
 
-    return float(default)
+    return None
+
+def lookup_ionic_radius(element, ox, default=0.0):
+    value = _lookup_ionic_radius_cached(element, ox)
+    if value is None:
+        return float(default)
+    return float(value)
+
+    
 

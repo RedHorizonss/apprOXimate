@@ -67,11 +67,7 @@ class MaterialFeatureExtractor:
             mod_feats = module.get_features(formula)
 
             # Filter feature names based on mode
-            if self.mode == "all":
-                mod_feats = {k: v for k, v in mod_feats.items() if k.startswith("all_")}
-            elif self.mode == "var":
-                mod_feats = {k: v for k, v in mod_feats.items() if k.startswith("var_")}
-            # elif mode == "both": keep everything
+            mod_feats = module.filter_mode(mod_feats, self.mode)
 
             features.update(mod_feats)
 

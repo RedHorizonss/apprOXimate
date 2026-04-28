@@ -25,8 +25,7 @@ class IonicRadiusModule(FeatureModule):
         )
 
     def get_features(self, formula):
-        result = self.approx.charge_balance(formula, return_format="dict")
-        all_elems, var_elems = self.parse_result(result)
+        all_elems, var_elems = self.get_parsed_elements(formula)
 
         features = {}
 
@@ -37,9 +36,6 @@ class IonicRadiusModule(FeatureModule):
         if var_elems:
             features |= self._expand_group(var_elems, "var_")
         else:
-            # zero-fill
-            zero = self._expand_group(all_elems, "all_")
-            for k in zero:
-                features[k.replace("all_", "var_")] = 0.0
+            features |= self.zero_fill_from_all(features)
 
         return features

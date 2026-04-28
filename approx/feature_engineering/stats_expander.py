@@ -1,5 +1,5 @@
 import numpy as np
-from collections import Counter
+from collections import defaultdict
 
 class StatsExpander:
     """
@@ -19,10 +19,13 @@ class StatsExpander:
         total_weight = weights.sum()
 
         avg = np.average(values, weights=weights)
-        var = np.average((values - avg) ** 2, weights=weights)
+        var = np.average(np.square(values - avg), weights=weights)
         std = np.sqrt(var)
 
-        mode_val = Counter(values).most_common(1)[0][0]
+        weighted_counts = defaultdict(float)
+        for value, weight in zip(values, weights):
+            weighted_counts[float(value)] += float(weight)
+        mode_val = max(weighted_counts.items(), key=lambda item: item[1])[0]
 
         return {
             f"{prefix}sum": np.sum(values * weights),

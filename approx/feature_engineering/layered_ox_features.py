@@ -1,4 +1,3 @@
-from pymatgen.core import Species
 from .base import FeatureModule
 from .registry import register_feature
 from .utils import lookup_ionic_radius
@@ -47,7 +46,7 @@ class TransitionMetalPotentialModule(FeatureModule):
 
         for el, ox, qty in elems:
             if el not in (self.cation, self.anion):
-                r = Species(el, ox).ionic_radius
+                r = lookup_ionic_radius(el, ox, default=0.0)
                 if r:
                     weighted += r * qty
                     total_qty += qty
@@ -65,8 +64,7 @@ class TransitionMetalPotentialModule(FeatureModule):
         return (TM_r * cat_p) / an_p
 
     def get_features(self, formula):
-        result = self.approx.charge_balance(formula, return_format="dict")
-        all_elems, _ = self.parse_result(result)
+        all_elems, _ = self.get_parsed_elements(formula)
 
         TM_pot = self.TM_weighted_ionic_pot(all_elems)
         cat_pot, an_pot = self.cat_an_ionic_pots(all_elems)
