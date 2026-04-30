@@ -7,6 +7,8 @@ from .registry import register_feature
 from .stats_expander import StatsExpander
 
 
+#TODO: Fix pauling EN
+
 @register_feature
 class ElectronegativityModule(FeatureModule):
     IP_SCALE = 12.0
