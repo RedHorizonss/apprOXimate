@@ -1,4 +1,4 @@
-HMS,StructuredFormula,Temperature,Pressure,crystal_system
+HMS,Chemical,Temperature,Pressure,Crystal_System
 P 4/m m m,Nd1Ba1Mn1Fe1O5.45,293,0.101325,tetragonal
 P 4/m m m,Nd1Ba1Mn1Fe1O5.17,293,0.101325,tetragonal
 P 4/m m m,Nd1Ba1Mn1Fe1O5.09,293,0.101325,tetragonal
@@ -920,7 +920,6 @@ R -3 m H,Ba2La2Mn1W2O12,293,0.101325,trigonal
 R -3 c H,La0.7Ca0.13Sr0.17Mn1O3,300,0.101325,trigonal
 P -3,Mn1Si1F6H12O6,298,0.101325,trigonal
 R -3 m H,Li1Ni0.8Mn0.1Co0.1O2,293,0.101325,trigonal
-R -3 m H,Mn1Si1F6D12O6,293,0.101325,trigonal
 R -3 m H,Mn1Al0.65Li0.33O4H2,293,0.101325,trigonal
 P 3 1 c,Mg2H24O12Mn1Cl6,293,0.101325,trigonal
 R -3 c H,La0.85Na0.12K0.03Mn1O3,293,0.101325,trigonal
@@ -1584,7 +1583,6 @@ P -1,Ag0.15Na1.85Mn2Mo3O12,298,0.101325,triclinic
 C -1,Mn0.915Fe0.0021Mg0.083Si1O3,293,0.101325,triclinic
 C -1,Mn3Zn1Ca1Si5O15,293,0.101325,triclinic
 P -1,Co2H28O14Mn2F10,301.9,0.101325,triclinic
-C -1,Na0.6Mn2O5.5D2H1,298,0.101325,triclinic
 P -1,Ca1Mn1H6As2O10,293,0.101325,triclinic
 P -1,Cu3Mn2F12H24O12,293,0.101325,triclinic
 P -1,Mn3Ca1.93Fe1.07Si5.94O18,293,0.101325,triclinic

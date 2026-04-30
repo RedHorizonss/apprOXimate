@@ -1,0 +1,439 @@
+HMS,Chemical,Temperature,Pressure,Crystal_System
+P 42/n m c Z,Y2Cu1Ga1Mn4O12,297.0,0.101325,tetragonal
+P 42/n m c Z,Sm2Mn4Zn1Ti1O12,293.0,0.101325,tetragonal
+P 4 2 2,Sr1La1Zn0.5Mn0.5O4,293.0,0.101325,tetragonal
+I 4/m m m,Dy0.434Sr1.434Mn0.76Ni0.19O4,293.0,0.101325,tetragonal
+I 4/m m m,Sr2La1Mn1Fe1O6.88,293.0,0.101325,tetragonal
+I 4/m m m,Sr2Mn0.996Zn1.88As2O2,293.0,0.101325,tetragonal
+I 4/m c m,Pr0.5Sr0.45Ba0.05Mn1O3,293.0,0.101325,tetragonal
+I 4/m c m,Pr0.5Sr0.2Ba0.3Mn1O3,293.0,0.101325,tetragonal
+P 42/n Z,Ca1Mn0.786Co1.214W1O6,293.0,0.101325,tetragonal
+I 4/m m m,La1.24Sr1.76Mn1.52Ru0.48O7,293.0,0.101325,tetragonal
+I 4/m m m,Ca1Sr3Mn1.5Fe1.5O10,300.0,0.101325,tetragonal
+P 4/m m m,La0.5Sr0.2Ba0.3Mn1O3,293.0,0.101325,tetragonal
+P 4/m m m,Nd1Ba1Mn1Co1O6,300.0,0.101325,tetragonal
+I 4/m c m,Sr0.8Ce0.2Mn0.8Co0.2O3,293.0,0.101325,tetragonal
+I 4/m m m,Sr2Mn2Cu1As2O2,293.0,0.101325,tetragonal
+I 4/m m m,Nd1Sr1Mn0.5Cu0.5O4,295.0,0.101325,tetragonal
+I 4/m m m,La0.5Sr1.5Mn0.7Ru0.3O4,300.0,0.101325,tetragonal
+P 4/m m m,Nd1Ba1Co1.5Mn0.5O5.6,293.0,0.101325,tetragonal
+P 4/m m m,Nd1Ba1Co1Mn1O5.62,293.0,0.101325,tetragonal
+I 41/a c d Z,Zr0.94Mg1.55Mn4.45Si1O12,293.0,0.101325,tetragonal
+P 4/n b m Z,Ce1Mn1.5Co0.5Ge4O12,293.0,0.101325,tetragonal
+P 42/m n m,Y1Sr1Ca1Mn2O7,298.0,0.101325,tetragonal
+I 4/m m m,La0.5Sr1.5Mn0.5Fe0.5O4,293.0,0.101325,tetragonal
+I 4/m m m,Nd0.5Sr1.5Mn0.5Fe0.5O4,293.0,0.101325,tetragonal
+P 4/n m m Z,Mn1Nd0.95Sr0.05O1As1,290.0,0.101325,tetragonal
+I 4/m c m,Sr0.6Ca0.3Ce0.1Mn1O3,293.0,0.101325,tetragonal
+I 4/m m m,La1.2Sr1.8Co1Mn1O7,295.0,0.101325,tetragonal
+I 4/m m m,La1Sr2Co1Mn1O6,295.0,0.101325,tetragonal
+P 4/m m m,Pr1Ba1Mn1Fe1O6,293.0,0.101325,tetragonal
+I 4/m c m,La0.5Sr0.5Mn0.93Cu0.07O3,293.0,0.101325,tetragonal
+I 4/m m m,La1Sr1Ca1Mn2O7,293.0,0.101325,tetragonal
+I 4/m m m,La0.8Sr1Ca1.2Mn2O7,293.0,0.101325,tetragonal
+P 42/n m c Z,Na1Eu1Mn2Ti4O12,295.0,0.101325,tetragonal
+P 42/n m c Z,Na1Ho1Mn2Ti4O12,295.0,0.101325,tetragonal
+I 4/m m m,La1.2Ba1.8Mn1.5Ru0.5O7,300.0,0.101325,tetragonal
+I 4/m m m,Pr1.5Sr1.5Cu1Mn1O6.5,293.0,0.101325,tetragonal
+I 4/m c m,Sr0.85La1Mn1Ti1O6,298.0,0.101325,tetragonal
+I 4/m m m,La1Sr2Co1Mn1O7.011,293.0,0.101325,tetragonal
+I 4/m m m,La1Sr2Co1Mn1O6.943,293.0,0.101325,tetragonal
+I 4/m m m,La2Sm0.4Sr0.6Mn2O7,293.0,0.101325,tetragonal
+I 4/m m m,La1.6Sr0.7Ca0.7Mn2O7,293.0,0.101325,tetragonal
+I 4/m c m,Sr0.4Ca0.4Nd0.2Mn1O3,293.0,0.101325,tetragonal
+I 4/m m m,Gd1Sr2Mn1Cr1O7,293.0,0.101325,tetragonal
+I 4/m c m,Sr0.65Pr0.15Ce0.2Mn1O3,300.0,0.101325,tetragonal
+I 4/m c m,Sr0.65Pr0.05Ce0.3Mn1O3,300.0,0.101325,tetragonal
+P 4 m m,Bi0.8La0.2Fe0.8Mn0.2O3,293.0,0.101325,tetragonal
+I 4/m m m,La1Sr1Ni0.8Mn0.2O4,293.0,0.101325,tetragonal
+I 4/m m m,La2Fe1Mn1Se2O3,300.0,0.101325,tetragonal
+P b c m,Mn9Bi1Se8O24Cl5,293.0,0.101325,orthorhombic
+P b c n,Mn0.97Ti0.03Ta1.28Nb0.72O6,293.0,0.101325,orthorhombic
+P n m a,La0.5Sr0.5Mn0.5Rh0.5O3,293.0,0.101325,orthorhombic
+P b n m,Gd0.5Sr0.5Fe0.5Mn0.5O3,293.0,0.101325,orthorhombic
+P b n m,Mg0.347Fe1.548Mn0.105Si1O4,293.0,0.101325,orthorhombic
+P b n m,La0.667Ca0.333Mn0.97In0.03O3,293.0,0.101325,orthorhombic
+P b n m,La0.667Ca0.333Mn0.95In0.05O3,293.0,0.101325,orthorhombic
+P b n m,La0.67Ca0.33Mn0.894Fe0.106O3.05,293.0,0.101325,orthorhombic
+I m a 2,Sr1Ca1Mn1Ga1O5,290.0,0.101325,orthorhombic
+P n m a,Ba1Pb1.5Mn6Al2O16,293.0,0.101325,orthorhombic
+P b c a,Ca1.67Mn0.33H2Si1O5,293.0,0.101325,orthorhombic
+I m m m,Ba1Mn0.36Mg0.64Nd2O5,293.0,0.101325,orthorhombic
+P n m a,La0.1Ca0.9Mn0.4Ti0.6O3,293.0,0.101325,orthorhombic
+P n m a,La0.1Ca0.9Mn0.2Ti0.8O3,293.0,0.101325,orthorhombic
+P n m a,La0.1Ca0.9Mn0.1Ti0.9O3,293.0,0.101325,orthorhombic
+P 21 21 21,Ca1Mn1O5Si1H1,300.0,0.101325,orthorhombic
+P n m a,Pr0.5Ca0.5Mn0.95Cr0.05O3,300.0,0.101325,orthorhombic
+P b n m,La0.625Ca0.35Mn1O2.9F0.05,293.0,0.101325,orthorhombic
+I m m a,La1.2Ba0.8In1Mn1O6,293.0,0.101325,orthorhombic
+P n m a,Nd0.7Ba0.25Sr0.05Mn1O3,293.0,0.101325,orthorhombic
+P n m a,Nd0.6Mg0.2Sr0.3Mn0.9O3,298.0,0.101325,orthorhombic
+P n n m,Al1.562Mn0.342Fe0.096O5Si1,293.0,0.101325,orthorhombic
+P n m a,Ca2Fe0.59Mn0.57Al0.84O4.97,293.0,0.101325,orthorhombic
+P n m a,La0.7Y0.05Ba0.25Mn1O3,293.0,0.101325,orthorhombic
+P m m n Z,Gd2Cu1Zn1Mn4O12,295.0,0.101325,orthorhombic
+P n a m,Pb0.9Sr0.09Mn1B1O4,293.0,0.101325,orthorhombic
+P n a m,Pb0.16Sr0.84Mn1B1O4,293.0,0.101325,orthorhombic
+P b n m,Pr0.5Sr0.4Na0.1Mn1O3,293.0,0.101325,orthorhombic
+P b n m,Pr0.5Sr0.35Na0.15Mn1O3,293.0,0.101325,orthorhombic
+P b n m,Pr0.5Sr0.3Na0.2Mn1O3,293.0,0.101325,orthorhombic
+P n m a,La0.7Pr0.3Mn0.8Co0.2O3,293.0,0.101325,orthorhombic
+P n m a,Ca0.5Eu0.5Mn0.5Ti0.5O3,293.0,0.101325,orthorhombic
+P n m a,Ca0.67Y0.33Mn0.33Ti0.67O3,293.0,0.101325,orthorhombic
+P n m a,Ca0.67Gd0.33Mn0.33Ti0.67O3,293.0,0.101325,orthorhombic
+P n m a,Ca1.9La0.1Mn1Ir1O6,293.0,0.101325,orthorhombic
+P b n m,Pr0.3Bi0.3Sr0.4Mn1O3,293.0,0.101325,orthorhombic
+P b n m,Pr0.6Sr0.4Mn0.95Bi0.05O3,300.0,0.101325,orthorhombic
+P b n m,Pr0.9Na0.04K0.06Mn1O3,293.0,0.101325,orthorhombic
+P b n m,Pr0.9Na0.02K0.08Mn1O3,293.0,0.101325,orthorhombic
+P n m a,La0.65Ca0.35Mn0.3Co0.7O3,293.0,0.101325,orthorhombic
+P m c 21,Ba6Mn4Si12O34Cl3,295.0,0.101325,orthorhombic
+P b c n,Fe0.263Nb0.633Mn0.07Ta0.034O2,293.0,0.101325,orthorhombic
+P b c n,Fe0.791Mn0.209Nb1.9Ta0.1O6,293.0,0.101325,orthorhombic
+P m n 21,Li2Cd0.99Mn0.01Ge1O4,300.0,0.101325,orthorhombic
+P m n 21,Li2Cd0.75Mn0.25Ge1O4,300.0,0.101325,orthorhombic
+I m m a,La1Ba1Mn1Sn1O6,293.0,0.101325,orthorhombic
+B m a b,Sm1.5Sr0.5Ni0.97Mn0.03O4,293.0,0.101325,orthorhombic
+P n m a,La0.7Ca0.3Mn0.3Cr0.7O3,293.0,0.101325,orthorhombic
+P n m a,Pr0.6Sr0.4Mn0.7Ti0.3O3,293.0,0.101325,orthorhombic
+P b n m,La0.95Sr0.05Ga0.95Mn0.05O3,303.0,0.101325,orthorhombic
+P b n m,Pr0.6Ca0.1Sr0.3Mn1O3,293.0,0.101325,orthorhombic
+P n m a,Ca1Sr1Ti1Mn1O6,293.0,0.101325,orthorhombic
+P m m m,Y1.14Ba1.86Fe1.96Mn1.04O8,293.0,0.101325,orthorhombic
+P 21 n m,Bi0.6Ca0.4Mn0.8Ru0.2O3,300.0,0.101325,orthorhombic
+C m c m,Bi9Mn0.8Pb0.2O12Cl5,293.0,0.101325,orthorhombic
+P n m a,La1.8Bi0.2Co1Mn1O6,293.0,0.101325,orthorhombic
+B m a b,Ce2O2Zn0.167Mn0.833Se2,293.0,0.101325,orthorhombic
+I m c b,La2O2Zn0.1Mn0.9Se2,293.0,0.101325,orthorhombic
+A 21 a m,Pb0.8Bi4.2Ti3.8Mn0.2O15,293.0,0.101325,orthorhombic
+A 21 a m,Pb0.4Bi4.6Ti3.4Mn0.6O15,293.0,0.101325,orthorhombic
+P n m a,Ba1Ca0.6Mn0.4V2O7,293.0,0.101325,orthorhombic
+C m m 2,Cs2Br2Mn1V2O6,293.0,0.101325,orthorhombic
+P n a m,Pb1Al0.9Mn0.1B1O4,298.0,0.101325,orthorhombic
+P n a m,Pb1Al0.6Mn0.4B1O4,298.0,0.101325,orthorhombic
+P n a m,Pb1Al0.1Mn0.9B1O4,298.0,0.101325,orthorhombic
+P n m a,Pb1.262Ba0.738Fe1.026Mn0.974O5,293.0,0.101325,orthorhombic
+P b a m,Ca2Mn2O13H6B4,293.0,0.101325,orthorhombic
+P n m a,La0.2668Pr0.4002Ca0.333Mn1O3,293.0,0.101325,orthorhombic
+P b n m,La0.67Ca0.29Sr0.04Mn1O3,293.0,0.101325,orthorhombic
+P n m a,La0.9Ba0.1Mn0.9Ti0.1O3,293.0,0.101325,orthorhombic
+P b n m,Sm0.32Pr0.18Sr0.5Mn1O3,300.0,0.101325,orthorhombic
+P n m a,Bi0.85Ca0.15Fe0.55Mn0.45O3,300.0,0.101325,orthorhombic
+P n m a,Pr0.45Ca0.55Mn0.95V0.05O3,293.0,0.101325,orthorhombic
+P n m a,Pr0.7Ca0.3Mn0.9Fe0.1O3,293.0,0.101325,orthorhombic
+P n m a,La0.66Ca0.33Y0.01Mn1O3,298.0,0.101325,orthorhombic
+P n m a,La0.65Ca0.33Y0.02Mn1O3,298.0,0.101325,orthorhombic
+P n m a,La0.59Ca0.33Y0.08Mn1O3,298.0,0.101325,orthorhombic
+P n m a,La0.52Ca0.33Y0.15Mn1O3,298.0,0.101325,orthorhombic
+P b n m,La0.335Nd0.335Ca0.33Mn1O3,293.0,0.101325,orthorhombic
+P b n m,La0.325Sr0.65Mn1O2F0.95,293.0,0.101325,orthorhombic
+P b n m,La0.667Ba0.041625Ca0.291375Mn1O3,293.0,0.101325,orthorhombic
+A 21 a m,Bi2La1Nb1.5Mn0.5O9,300.0,0.101325,orthorhombic
+C m c m,K0.26Mn0.9Ir0.06O2.71H1.42,293.0,0.101325,orthorhombic
+P b n m,Nd0.67Sr0.33Mn0.9Cr0.1O3,293.0,0.101325,orthorhombic
+P b n m,La1.75Ca0.25Mn1Ti1O6,293.0,0.101325,orthorhombic
+P b n m,Nd0.5Ca0.5Mn0.95Ru0.05O3.12,300.0,0.101325,orthorhombic
+P b n m,Nd0.5Ca0.5Mn0.92Ru0.08O3.27,300.0,0.101325,orthorhombic
+P b n m,Nd0.5Ca0.5Mn0.96Sc0.04O3.18,300.0,0.101325,orthorhombic
+P b n m,Nd0.5Ca0.5Mn0.92Sc0.08O3.24,300.0,0.101325,orthorhombic
+P b n m,Nd0.5Ca0.5Mn0.9Sc0.1O3.48,300.0,0.101325,orthorhombic
+P b n m,Nd0.5Sr0.33Eu0.17Mn1O3,293.0,0.101325,orthorhombic
+P b n m,Nd0.3Sr0.33Eu0.37Mn1O3,293.0,0.101325,orthorhombic
+P b n m,Nd0.3Eu0.37Sr0.33Mn1O3,293.0,0.101325,orthorhombic
+P n m a,La0.5Ca0.5Mn0.97Ni0.03O3,300.0,0.101325,orthorhombic
+P n m a,La0.5Ca0.3Ba0.2Mn1O3,300.0,0.101325,orthorhombic
+P n m a,La0.5Ca0.2Ba0.3Mn1O3,300.0,0.101325,orthorhombic
+P m n 21,Li1.994Mn0.006Mg1Ge1O4,293.0,0.101325,orthorhombic
+P m n 21,Li1.997Mn0.0115Mg1Ge0.991O4,293.0,0.101325,orthorhombic
+P n m a,Pr0.5Ca0.5Mn0.9Zn0.1O3,293.0,0.101325,orthorhombic
+P n m a,La0.3Nd0.2Ca0.5Mn1O3,300.0,0.101325,orthorhombic
+P b n m,La0.7Ca0.3Mn0.96Al0.04O3,293.0,0.101325,orthorhombic
+I m m a,Nd0.5Sr0.5Co0.6Mn0.4O3,293.0,0.101325,orthorhombic
+P n m a,La0.667Ca0.2664Zn0.0666Mn1O3,293.0,0.101325,orthorhombic
+P b n m,La0.513Sr0.128Nd0.257Mn1.071O3,293.0,0.101325,orthorhombic
+P b n m,La0.255Sr0.128Nd0.51Mn1.077O3,293.0,0.101325,orthorhombic
+P n m a,La1Sr1Mn1.9Fe0.1O5,293.0,0.101325,orthorhombic
+P n m a,Pr0.6Sr0.25K0.15Mn1O3,293.0,0.101325,orthorhombic
+P n m a,La0.67Ca0.33Mn0.97Co0.03O3,293.0,0.101325,orthorhombic
+P b n m,Nd0.5Sr0.5Ti0.5Mn0.5O2.71,293.0,0.101325,orthorhombic
+P b n m,Mn4.9Mg2.1Si3O14H2,293.0,0.101325,orthorhombic
+P b n m,Sr1Ca1Ti1Mn1O6,293.0,0.101325,orthorhombic
+P b a m,Ni1.757Mn0.826Cu0.416B1O5,298.0,0.101325,orthorhombic
+P b n m,La0.7Tb0.1Ca0.2Mn1O3,300.0,0.101325,orthorhombic
+P n m a,La0.7Ca0.3Mn0.98Ni0.02O3,293.0,0.101325,orthorhombic
+P n m a,La0.7Ca0.3Mn0.93Ni0.07O3,293.0,0.101325,orthorhombic
+P b n m,Nd0.67Sr0.33Mn0.9Cr0.1O3,293.0,0.101325,orthorhombic
+P b a m,Bi0.88Y0.12Fe0.95Mn0.05O3,293.0,0.101325,orthorhombic
+P n m a,La0.7Ca0.3Mn0.96Al0.04O3,295.0,0.101325,orthorhombic
+P n m a,La0.63Ca0.37Mn0.97Cu0.03O3,300.0,0.101325,orthorhombic
+P n m a,La0.63Ca0.37Mn0.92Cu0.08O3,300.0,0.101325,orthorhombic
+I m m a,Sr0.65Pr0.05Ce0.3Mn1O3,300.0,0.101325,orthorhombic
+P n m a,Pr0.6La0.1Ca0.3Mn1O3,293.0,0.101325,orthorhombic
+P n m a,Nd0.67Sr0.33Mn0.67Ti0.33O3,293.0,0.101325,orthorhombic
+P b n m,La0.7Te0.3Mn0.5Co0.5O3,293.0,0.101325,orthorhombic
+I m m a,La0.5Sm0.2Ba0.3Mn1O3,293.0,0.101325,orthorhombic
+P n m a,La0.78Ca0.18Pb0.05Mn1O3,293.0,0.101325,orthorhombic
+C m 2 m,Bi4Mn0.33W0.67O8Cl1,293.0,0.101325,orthorhombic
+R -3 m H,Na1Ni0.3Fe0.4Mn0.3O2,293.0,0.101325,trigonal
+R -3 m H,Li0.332Mn0.334Ni0.328Co0.338O2,293.0,0.101325,trigonal
+R -3 m H,Li0.425Mn0.332Ni0.334Co0.324O2,293.0,0.101325,trigonal
+R -3 c H,La0.8Ba0.2Mn0.8Cu0.2O2.64,293.0,0.101325,trigonal
+P -3 m 1,Ba6Ru2.5Mn0.5O12Cl2,293.0,0.101325,trigonal
+R -3 c H,La0.8Na0.2Mn0.97Co0.03O3,293.0,0.101325,trigonal
+R -3 m H,Na1Cu0.2Fe0.4Mn0.4O2,293.0,0.101325,trigonal
+R -3 m H,Na1Cu0.2Fe0.1Mn0.7O2,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Co0.25Mn0.75O3,293.0,0.101325,trigonal
+R -3 c H,La0.65Pb0.35Mn0.95Ti0.05O3,293.0,0.101325,trigonal
+R -3 c H,La0.85Na0.09K0.06Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.706Sr0.294Mn0.98Cr0.02O3,293.0,0.101325,trigonal
+R -3 c H,La0.724Sr0.276Mn0.92Cr0.08O3,293.0,0.101325,trigonal
+R -3 c H,La0.712Sr0.288Mn0.96Co0.04O3,293.0,0.101325,trigonal
+R -3 c H,La0.718Sr0.282Mn0.94Co0.06O3,293.0,0.101325,trigonal
+R -3 c H,La0.778Sr0.222Mn0.94Cu0.06O3,293.0,0.101325,trigonal
+R -3 c H,La0.726Sr0.274Mn0.98Zn0.02O3,293.0,0.101325,trigonal
+R -3 c H,La0.724Sr0.276Mn0.92Sc0.08O3,293.0,0.101325,trigonal
+R -3 c H,La0.726Ba0.274Mn0.98Zn0.02O3,293.0,0.101325,trigonal
+R -3 c H,La0.778Ba0.222Mn0.94Zn0.06O3,293.0,0.101325,trigonal
+R -3 c H,La0.706Ba0.294Mn0.98Sc0.02O3,293.0,0.101325,trigonal
+R -3 c H,La0.6Ba0.3Ca0.1Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.6Sr0.4Mn0.6Fe0.4O3,293.0,0.101325,trigonal
+R -3 c H,La0.42Pr0.18Sr0.4Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.55Pr0.1Sr0.35Mn1O3,293.0,0.101325,trigonal
+R -3 m H,Na0.9Cu0.18Fe0.3Mn0.52O2,293.0,0.101325,trigonal
+R -3 m H,Li0.94Ni0.8Co0.1Mn0.1O2,293.0,0.101325,trigonal
+R 3 c H,Li0.82Mn0.18Fe0.09Nb0.91O3,298.0,0.101325,trigonal
+R -3 m H,Li1.02Ni0.43Mn0.57Cr0.025O2,293.0,0.101325,trigonal
+R -3 c H,La0.6Sr0.3K0.1Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.95Sn0.05O3,293.0,0.101325,trigonal
+R -3 m H,Ba7Y2Mn3Ti2O19.992,293.0,0.101325,trigonal
+R -3 m H,Li0.5Ni0.45Mn0.45Al0.1O2,293.0,0.101325,trigonal
+R -3 m H,Ba7Ca2Mn3Cr2O20,298.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.19Hg0.09Mn1O3,300.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.09Hg0.18Mn1O3,300.0,0.101325,trigonal
+R -3 c H,La0.55Eu0.15Ba0.3Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.67Pb0.33Mn0.75Co0.25O3,293.0,0.101325,trigonal
+R 3 c H,Li0.9Ta0.9Mn0.15Mo0.05O3,298.0,0.101325,trigonal
+R -3 c H,La0.75Sr0.25Cr0.5Mn0.5O3,293.0,0.101325,trigonal
+R -3 m H,Li1Ni0.45Mn0.4Co0.15O2,293.0,0.101325,trigonal
+R -3 c H,La0.67Pb0.28Ag0.05Mn1O3,293.0,0.101325,trigonal
+R -3 m H,Li0.824Ni0.5Co0.2Mn0.3O2,293.0,0.101325,trigonal
+R -3 m H,Li0.54Ni0.5Co0.2Mn0.3O2,293.0,0.101325,trigonal
+R -3 m H,Li0.34Ni0.5Co0.2Mn0.3O2,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.85Mg0.15O3,300.0,0.101325,trigonal
+R -3 c H,La0.7Ba0.2Ca0.1Mn1O3,293.0,0.101325,trigonal
+R -3 m H,Li0.594Na0.035Mn0.897Ti0.103O2,293.0,0.101325,trigonal
+R -3 c H,La0.67Sr0.33Mn0.95V0.05O3,293.0,0.101325,trigonal
+R -3 m H,Li1.204Ni0.247Mn0.433Co0.116O2,293.0,0.101325,trigonal
+R -3 c H,La0.52Dy0.15Pb0.33Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.47Dy0.2Pb0.33Mn1O3,293.0,0.101325,trigonal
+P -3 m 1,Fe1.45Mn2.55Si2Sn7O16,298.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.85Mg0.15O3,300.0,0.101325,trigonal
+R -3 c H,La0.72Ba0.23Na0.028Mn1O3,293.0,0.101325,trigonal
+R 3 m H,Na0.5796Mn0.65Co0.18Ni0.17O2,293.0,0.101325,trigonal
+R -3 m H,Li1.02Ni0.49Co0.196Mn0.294O2,293.0,0.101325,trigonal
+R -3 m H,Li1.038Ni0.481Co0.192Mn0.289O2,293.0,0.101325,trigonal
+P -3,Ba1Li2Mn1V2O8,293.0,0.101325,trigonal
+R -3 c H,La0.85Ba0.15Mn0.94Fe0.06O3,293.0,0.101325,trigonal
+R -3 c H,La0.85Ba0.15Mn0.92Fe0.08O3,293.0,0.101325,trigonal
+R -3 c H,La0.85Ba0.15Mn0.8Fe0.2O3,293.0,0.101325,trigonal
+R -3 c H,La0.6Ba0.4Mn0.94Fe0.06O3,293.0,0.101325,trigonal
+R -3 m H,Li1Ni0.33Mn0.33Co0.33O2,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.25Nd0.05Mn1O3,293.0,0.101325,trigonal
+R 3 m H,Na0.67Mn0.7Ni0.2Mg0.1O2,293.0,0.101325,trigonal
+R -3 c H,La0.55Sr0.25Ag0.2Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.62Nd0.05Ba0.33Mn1O3,293.0,0.101325,trigonal
+R -3 c H,Ca3Co0.85Ni0.15Mn1O6,293.0,0.101325,trigonal
+R -3 c H,La0.6Nd0.2Sr0.2Mn1O3,293.0,0.101325,trigonal
+R 3 c H,Bi0.99Y0.01Fe0.95Mn0.05O3,293.0,0.101325,trigonal
+R -3 c H,La0.717Sr0.167Mn1O2.583F0.333,293.0,0.101325,trigonal
+R -3 c H,La0.667Ba0.1665Ca0.1665Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Ca0.26Na0.04Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.99Cu0.01O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.96Cu0.04O3,293.0,0.101325,trigonal
+R -3 c H,La0.37Bi0.3Sr0.33Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.69K0.25Sr0.06Mn1O3,293.0,0.101325,trigonal
+R -3 m H,Li1Ni0.8Mn0.15Al0.05O2,293.0,0.101325,trigonal
+R -3 m H,Na1Ni0.3Fe0.2Mn0.5O2,293.0,0.101325,trigonal
+P -3,Ca0.2Mn0.9K0.009O2.6H1.2,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.98Fe0.02O3,293.0,0.101325,trigonal
+R -3 c H,La0.75Sr0.25Mn0.3Cr0.7O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.99Cu0.01O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.3Mn0.96Cu0.04O3,293.0,0.101325,trigonal
+R -3 m H,Li1.12Ni0.374Mn0.374Co0.132O2,293.0,0.101325,trigonal
+R -3 c H,La0.7Ca0.26Na0.04Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Pb0.3Mn0.9V0.1O3,293.0,0.101325,trigonal
+R 3 2 H,Mn1H27O43Co1Mo9,293.0,0.101325,trigonal
+R 3 2 H,Ni3Mn1Mo9O43.5H23,293.0,0.101325,trigonal
+R 3 c H,Bi0.9Ba0.1Fe0.9Mn0.1O3,293.0,0.101325,trigonal
+R -3 m H,Li0.932Ni0.868Co0.1Mn0.1O2,293.0,0.101325,trigonal
+R -3 m H,Li1.031Ni0.323Co0.323Mn0.323O2,293.0,0.101325,trigonal
+R -3 c H,La0.67Ba0.33Mn0.98Cr0.02O3,293.0,0.101325,trigonal
+R -3 c H,La0.67Sr0.33Mn0.95Ni0.05O3,293.0,0.101325,trigonal
+R -3 c H,La0.644Sr0.129Nd0.129Mn1.069O3,293.0,0.101325,trigonal
+R -3 c H,La0.34Sm0.33Ba0.33Mn1O2.945,293.0,0.101325,trigonal
+R -3 c H,La0.65Ca0.25Ba0.1Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.65Ca0.2Ba0.15Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.8Ba0.2Mn0.8Fe0.2O3,293.0,0.101325,trigonal
+R -3 c H,La0.5Sr0.5Mn0.9Ti0.1O3,293.0,0.101325,trigonal
+R -3 m H,Li0.979Ni0.821Co0.1Mn0.1O2,293.0,0.101325,trigonal
+R -3 m H,Na0.969Ni0.388Fe0.184Mn0.379O1.98,293.0,0.101325,trigonal
+R -3 c H,La0.47Pr0.2Ba0.33Mn1O3,293.0,0.101325,trigonal
+R -3 m H,Na0.76Mn0.33Ni0.33Co0.33O2,293.0,0.101325,trigonal
+R -3 m H,Na1Ni0.2Mn0.4Cu0.2O2,293.0,0.101325,trigonal
+R -3 c H,Ca2.4Sr0.6Co1Mn1O6,293.0,0.101325,trigonal
+R -3 c H,Ca2.1Sr0.9Co1Mn1O6,293.0,0.101325,trigonal
+R -3 c H,La0.67Ca0.05Ag0.28Mn1O3,293.0,0.101325,trigonal
+R 3 c H,Bi0.88Y0.12Fe0.95Mn0.05O3,293.0,0.101325,trigonal
+R -3 c H,La0.5Gd0.1Sr0.4Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.55Bi0.1Ca0.35Mn1O3,293.0,0.101325,trigonal
+R 3 c H,Bi0.9La0.1Fe0.9Mn0.1O3,293.0,0.101325,trigonal
+R -3 c H,La0.67Sr0.28Mg0.05Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.67Sr0.13Mg0.2Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.9Li0.06Na0.04Mn1O3,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.1Ag0.05Mn0.866O2.574,293.0,0.101325,trigonal
+R -3 c H,La0.7Sr0.1Ag0.075Mn0.879O2.632,293.0,0.101325,trigonal
+R 3 c H,Bi0.88Ca0.12Fe0.88Mn0.12O3,293.0,0.101325,trigonal
+R -3 c H,La0.35Bi0.25Sr0.4Mn1O3,293.0,0.101325,trigonal
+P -1,Ca2Mn7Si10O35H12,293.0,0.101325,triclinic
+C -1,Mn3.54Mg0.86Ca0.6Si5O15,293.0,0.101325,triclinic
+C -1,Mn0.915Fe0.0021Mg0.083Si1O3,293.0,0.101325,triclinic
+I -1,Ba1La1Mn1Mo1O6,295.0,0.101325,triclinic
+P -1,Li0.725Mn3.92Na0.27Si5O15,296.0,0.101325,triclinic
+P -1,Mn3Sb2.1O9.9V1.9Cl2,293.0,0.101325,triclinic
+P -1,Mg0.5Mn3.43Ca0.07O10H6,293.0,0.101325,triclinic
+P -1,Mn1U2O20As2H16,293.0,0.101325,triclinic
+I -1,Sr1La1Fe1Mn1O6,293.0,0.101325,triclinic
+P 1 21/n 1,Mn4As1Si3O13H1,293.0,0.101325,monoclinic
+C 1 2/m 1,Li2Ni0.23Co0.12Mn0.65O3,293.0,0.101325,monoclinic
+P 1 21/c 1,La0.7Ce0.153Ca0.147Mn1O3,293.0,0.101325,monoclinic
+P 1 21/c 1,Na2Mn1Se2O10H4,293.0,0.101325,monoclinic
+P 1 21/c 1,Rb2Mn1Se1O4F3,293.0,0.101325,monoclinic
+I 1 2/c 1,La1.5Sr0.5Ga1Mn1O6,293.0,0.101325,monoclinic
+I 1 2/c 1,La1.3Sr0.7Ga1Mn1O6,293.0,0.101325,monoclinic
+C 1 2/m 1,Cu0.69Mn2.31As2O16H16,293.0,0.101325,monoclinic
+C 1 2/c 1,Na1.967Mn2.95Al0.05V3O12,293.0,0.101325,monoclinic
+P 1 21/n 1,Ca0.476Sr1.524Mn1W1O6,293.0,0.101325,monoclinic
+P 1 21/n 1,Ca1.464Sr0.536Mn1W1O6,293.0,0.101325,monoclinic
+P 1 21 1,Na1La1Mn1W1O6,298.0,0.101325,monoclinic
+P 1 21/n 1,La2Ni1Mn0.4Ti0.6O6,293.0,0.101325,monoclinic
+C 1 2/c 1,Na1Mn1V0.1Ge1.9O6,293.0,0.101325,monoclinic
+C 1 c 1,Na2Zn2Mn1B4.68O11,293.0,0.101325,monoclinic
+P 1 21/m 1,Cs1Mn2Mo2O9H1,298.0,0.101325,monoclinic
+P 1 21/n 1,Nd1Sm1Ni1Mn1O6,293.0,0.101325,monoclinic
+P 1 21/c 1,Cu1.83Mn0.4Fe0.77B1O5,293.0,0.101325,monoclinic
+P 1 21/n 1,Sr1La1Mn1Re1O6,293.0,0.101325,monoclinic
+C 1 2/c 1,Ag2Mn2Fe1V3O12,293.0,0.101325,monoclinic
+C 1 2 1,Ca2Mn2Si4O17H8,293.0,0.101325,monoclinic
+C 1 2/m 1,Li1.4Mn0.598O2.400Ni0.402Co0.198,293.0,0.101325,monoclinic
+C 1 2/m 1,K2Mn3V2O10H2,298.0,0.101325,monoclinic
+P 1 21/c 1,Mn1Sb2O4H1Cl1,293.0,0.101325,monoclinic
+P 1 21/n 1,Ca1La1Mn1Mo1O5.92,300.0,0.101325,monoclinic
+P 1 21/n 1,La1Sr1Mn1Nb1O6,293.0,0.101325,monoclinic
+P 1 21/n 1,Ca1.921Ce0.079Mn1Re1O6,293.0,0.101325,monoclinic
+C 1 2/m 1,Li0.89Mn0.54Ni0.13Co0.13O2,293.0,0.101325,monoclinic
+C 1 2/m 1,Li0.77Mn0.54Ni0.13Co0.13O2,293.0,0.101325,monoclinic
+C 1 2/c 1,K1Cu1Mn3V3O12,293.0,0.101325,monoclinic
+C 1 2/c 1,Ca0.74Mn2.59Na0.88As3O12,298.0,0.101325,monoclinic
+P 1 21/c 1,K0.65Na0.5Mn3.43As3O12,298.0,0.101325,monoclinic
+A 1 2 1,Ca2Mn2Si4O17H8,293.0,0.101325,monoclinic
+P 1 21/m 1,Mn1Al6Si4O19H2,293.0,0.101325,monoclinic
+P 1 21/c 1,Mn1Ca2As2O10H4,293.0,0.101325,monoclinic
+P 1 21/m 1,Ba1Mn1F5H2O1,293.0,0.101325,monoclinic
+C 1 2/m 1,Mn2Mg1Zn2O12H14,293.0,0.101325,monoclinic
+P 1 n 1,Pb3Mn1As3O9H1,293.0,0.101325,monoclinic
+P 1 21/n 1,Nd0.75Sr0.25Mn0.5Fe0.5O3,293.0,0.101325,monoclinic
+P 1 21/n 1,Nd0.75Ca0.25Mn0.5Fe0.5O3,293.0,0.101325,monoclinic
+P 1 21/n 1,Nd2Co0.8Cr0.2Mn1O6,293.0,0.101325,monoclinic
+C 1 2/c 1,Na0.46Mn0.89Ni0.11O2.44H0.88,293.0,0.101325,monoclinic
+P 1 21/n 1,Sr1.33La0.67Mn1Sb1O6,293.0,0.101325,monoclinic
+C 1 2/m 1,H1.825Mn0.98O2.84Ni0.06Na0.06,293.0,0.101325,monoclinic
+C 1 2/m 1,H2.23Mn0.94O3.065Ni0.05Na0.18,293.0,0.101325,monoclinic
+P 1 21/c 1,Cs1Mn3As3O15H8,293.0,0.101325,monoclinic
+C 1 2 1,Li1Mn0.7Co0.3B1O3,293.0,0.101325,monoclinic
+P 1 2 1,In0.15Na0.12Mn0.73W1O4,293.0,0.101325,monoclinic
+P 1 21/n 1,Ce1Zn0.7Mn0.3B5O10,293.0,0.101325,monoclinic
+C 1 2/m 1,Ca1Mn1Br4H16O8,293.0,0.101325,monoclinic
+P 1 21/c 1,Mn1H16O8Bi2I8,293.0,0.101325,monoclinic
+P 1 21/n 1,Na4H50O46Mn1W6,293.0,0.101325,monoclinic
+P 63/m,Sr5Mn2.841Si0.159O12.84H0.84,300.0,0.101325,hexagonal
+P 63/m m c,Na0.62K0.05Fe0.5Mn0.5O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.667Mn0.8Fe0.1Al0.1O2,293.0,0.101325,hexagonal
+P 63/m,Sr3.85Gd0.15Mn3O15Ge3,293.0,0.101325,hexagonal
+P 63/m,Sr3.88Dy0.12Mn3O15Ge3,293.0,0.101325,hexagonal
+P 63/m m c,Na0.66Li0.22Ti0.15Mn0.63O2,293.0,0.101325,hexagonal
+P 63/m m c,Li0.06Mg0.065Mn0.37Na0.325O1,293.0,0.101325,hexagonal
+P 63/m,Y1Ca3Mn3O15B4,293.0,0.101325,hexagonal
+P 63/m m c,Sr0.78Ba0.2La0.02Mn1O3,293.0,0.101325,hexagonal
+P 63/m m c,Sr0.66Ba0.3La0.04Mn1O3,293.0,0.101325,hexagonal
+P 63/m m c,Sr0.58Ba0.4La0.02Mn1O3,293.0,0.101325,hexagonal
+P 63/m m c,Na0.67Fe0.3333Mg0.0833Mn0.5833O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.639Li0.24Mn0.71Ti0.05O1.964,293.0,0.101325,hexagonal
+P 63/m m c,Na0.85Li0.12Ni0.22Mn0.66O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.8Li0.27Mn0.68Ti0.05O1.97,293.0,0.101325,hexagonal
+P 63/m m c,Na0.67Mn0.7Ni0.2Mg0.1O2,293.0,0.101325,hexagonal
+P 63,Na0.44Mg0.15Li0.1Mn0.75O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.7Mg0.15Li0.1Mn0.75O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.6667Co0.0417Ni0.2916Mn0.6667O2,293.0,0.101325,hexagonal
+P 63 m c,Mn3Te2O7.824H1.824Br0.176,293.0,0.101325,hexagonal
+P 63 m c,Mn3Te2O7.815H1.815Cl0.185,293.0,0.101325,hexagonal
+P 63/m,Rb1.242Mn2Te3O11H4,293.0,0.101325,hexagonal
+P 63,Cs1Mn2Te3O10H2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.67Mn0.486Fe0.5Zr0.014O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.6Fe0.5Mn0.49Zn0.01O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.66Ni0.28Zn0.05Mn0.67O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.66Ni0.18Zn0.15Mn0.67O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.72Ni0.21Mn0.69Li0.2O2,293.0,0.101325,hexagonal
+P 63/m,La8.67Mn0.5Sr0.5Si6O26,293.0,0.101325,hexagonal
+P 63/m m c,Na0.72Li0.12Ni0.22Mn0.66O2,293.0,0.101325,hexagonal
+P 63/m m c,Na0.667Mg0.167Cu0.167Mn0.667O2,293.0,0.101325,hexagonal
+P 63 m c,Y1Ba1Mn3Al1O7,293.0,0.101325,hexagonal
+P m -3 n,Nd18Li8Fe4Mn1O39,293.0,0.101325,cubic
+P m -3 m,Nd0.5Ba0.5Mn0.5Fe0.5O2.86,293.0,0.101325,cubic
+P m -3 m,Sr1Mn0.33Ti0.33Sb0.33O3,293.0,0.101325,cubic
+P m -3 m,Sr0.4Ba0.6Mn0.94Ti0.06O2.99,293.0,0.101325,cubic
+P m -3 m,Bi0.5Sr0.5Mn0.5Ti0.5O3,293.0,0.101325,cubic
+P m -3 m,Ca0.5Sr0.5Fe0.73Mn0.27O2.68,300.0,0.101325,cubic
+P m -3 m,Co0.43Mn0.57Sr0.75Y0.25O2.73,293.0,0.101325,cubic
+P m -3 m,La0.75Ba0.25Fe0.5Mn0.5O3,293.0,0.101325,cubic
+P m -3 m,La0.7Ba0.3Co0.6Mn0.4O3,293.0,0.101325,cubic
+P m -3 m,La0.6Ba0.4Co0.9Mn0.1O3,293.0,0.101325,cubic
+P m -3 m,Bi0.98Gd0.02Fe0.95Mn0.05O3,293.0,0.101325,cubic
+P m -3 m,Sr0.625Bi0.375Mn0.5Ti0.5O3,298.0,0.101325,cubic
+P m -3 m,La0.67Ba0.33Mn0.85Cr0.15O3,293.0,0.101325,cubic
+P m -3 m,La0.67Ba0.33Mn0.4Ti0.6O3,293.0,0.101325,cubic
+P m -3 m,Sr0.5La0.5Fe0.5Mn0.5O3,293.0,0.101325,cubic
+P m -3 m,Sr0.8Ca0.1Nd0.1Mn1O3,293.0,0.101325,cubic
+P 43 3 2,Li1Mg0.096Ni0.36Mn1.34O4,293.0,0.101325,cubic
+P -4 3 n,Na8Al6Si6O32Mn2,300.0,0.101325,cubic
+P -4 3 n,Mn8Be6Ge6O24Se2,293.0,0.101325,cubic
+I m -3,Ca1Cu2.544Mn3.456Ti1O11.62,293.0,0.101325,cubic
+I m -3,Ca1Cu2.55Mn0.45V4O12,293.0,0.101325,cubic
+I m -3,Ca1Cu1.74Mn1.26V4O12,293.0,0.101325,cubic
+I m -3,Pr1Mn3Al1Ti3O12,293.0,0.101325,cubic
+I a -3 d,Ca2.43Mn1.29Al1.28Si3O12,293.0,0.101325,cubic
+I a -3,Cu0.44Fe0.28Ti0.44Mn0.84O3,293.0,0.101325,cubic
+I a -3,Zr0.95Er0.02Mn0.03Te3O8,293.0,0.101325,cubic
+F m -3 m,Ba2Fe1Mn0.5W0.5O5.72,293.0,0.101325,cubic
+F m -3 m,Ba1La1Mn1Mo1O6,298.0,0.101325,cubic
+F m -3 m,Ba1La1Mn1Mo1O6,293.0,0.101325,cubic
+F m -3 m,Li0.6825Mn0.2275Ti0.1092O0.6734F0.3276,293.0,0.101325,cubic
+F d -3 m Z,Li0.95Cu0.19Mn1.56Cr0.3O4,293.0,0.101325,cubic
+F d -3 m Z,Ce0.5Mn1.5Ga0.5Sb1.5O7,295.0,0.101325,cubic
+F d -3 m Z,Li1Ni0.442Ti0.187Mn1.302O4,293.0,0.101325,cubic
+F d -3 m Z,Li1Ni0.484Ti0.39Mn1.108O4,293.0,0.101325,cubic
+F d -3 m Z,Mg0.896Fe0.193Mn0.004Al1.909O4,296.0,0.101325,cubic
+F d -3 m Z,Li1Ni0.5Mn0.9Ti0.6O4,293.0,0.101325,cubic
+F d -3 m Z,Li0.5Cu0.5Mn1Ru1O4,293.0,0.101325,cubic
+F d -3 m Z,Cs1Mn1Ti1O1F5,293.0,0.101325,cubic
+F d -3 m Z,Li1.02Ni0.5Mn1.5O3.98Cl0.02,293.0,0.101325,cubic
+F d -3 m Z,Li1.03Ni0.5Mn1.5O3.97Cl0.03,293.0,0.101325,cubic
+F d -3 m Z,Li1Cu0.05Ni0.45Mn1.5O4,293.0,0.101325,cubic
+F d -3 m S,Zr1.5Ti1.5V1.5Mn1.5O1,293.0,0.101325,cubic
+F d -3 m S,Fe2Zn0.5Mn0.4Mg0.1O4,293.0,0.101325,cubic
+F d -3 m S,Na0.965Mn1.5Ni0.5O3.8F0.2,293.0,0.101325,cubic
+F d -3 m S,Mg0.15Sr0.05Mn0.8Fe2O4,293.0,0.101325,cubic
+F d -3 m S,Mg0.05Sr0.15Mn0.8Fe2O4,293.0,0.101325,cubic
+F d -3 m S,Co1Cd0.4Mn0.3Fe1.3O4,293.0,0.101325,cubic
+F d -3 m S,Li1Cr0.2Ni0.4Mn1.4O4,293.0,0.101325,cubic
+F d -3 m S,Mn0.5Zn0.5Fe1.95Sc0.05O4,293.0,0.101325,cubic
+F -4 3 m,Li1In1Cr3.8Mn0.2O8,293.0,0.101325,cubic
