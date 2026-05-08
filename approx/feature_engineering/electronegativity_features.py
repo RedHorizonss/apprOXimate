@@ -1,5 +1,5 @@
 from collections import defaultdict
-from math import sqrt
+from math import isnan, sqrt
 
 from .base import FeatureModule
 from .ionic_radius_features import lookup_ionic_radius
@@ -7,17 +7,17 @@ from .registry import register_feature
 from .stats_expander import StatsExpander
 
 
-#TODO: Fix pauling EN
-
 @register_feature
 class ElectronegativityModule(FeatureModule):
     IP_SCALE = 12.0
     EA_SCALE = 8.0
     PAULING_Q_SLOPE = 0.03
 
-    def __init__(self, approx, ptable):
+    def __init__(self, approx, ptable, ionic_radius_unit="pm"):
         super().__init__(approx, ptable)
+        self.ionic_radius_unit = ionic_radius_unit
         self._zeff_cache = {}
+        self._standard_pauling_cache = {}
         self._valence_electron_cache = {}
 
     @staticmethod
@@ -54,6 +54,43 @@ class ElectronegativityModule(FeatureModule):
         self._zeff_cache[element] = value
         return value
 
+    @staticmethod
+    def _coerce_float(value):
+        if value is None:
+            return None
+
+        try:
+            if isnan(value):
+                return None
+        except TypeError:
+            pass
+
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return None
+
+    def _standard_pauling_en(self, element):
+        if element in self._standard_pauling_cache:
+            return self._standard_pauling_cache[element]
+
+        from pymatgen.core import Element
+
+        value = self._coerce_float(Element(element).X)
+        self._standard_pauling_cache[element] = value
+        return value
+
+    def _pauling_en(self, element, ox, row):
+        base_pauling = self._coerce_float(row["en_pauling"])
+        if base_pauling is not None:
+            return base_pauling + self.PAULING_Q_SLOPE * ox
+
+        standard_pauling = self._standard_pauling_en(element)
+        if standard_pauling is not None:
+            return standard_pauling
+
+        raise ValueError(f"No standard Pauling electronegativity for {element}")
+
     def _valence_electrons(self, element, ox):
         cache_key = (element, int(ox))
         if cache_key in self._valence_electron_cache:
@@ -82,12 +119,16 @@ class ElectronegativityModule(FeatureModule):
     def compute_en(self, element, ox):
         row = self.get_element_row(element)
 
-        r = lookup_ionic_radius(element, ox, default=100.0)
+        r = lookup_ionic_radius(
+            element,
+            ox,
+            default=100.0,
+            unit=self.ionic_radius_unit,
+        )
         Z_eff = self._Z_eff(element)
         n_val = self._valence_electrons(element, ox)
 
-        pauling_0 = float(row["en_pauling"] or 0.0)
-        pauling = pauling_0 + self.PAULING_Q_SLOPE * ox
+        pauling = self._pauling_en(element, ox, row)
 
         allred_rochow = (Z_eff / (r ** 2)) * 0.359 + 0.744
         gordy = Z_eff / r

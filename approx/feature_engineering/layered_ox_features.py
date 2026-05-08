@@ -14,17 +14,22 @@ class TransitionMetalPotentialModule(FeatureModule):
     User must specify cation="Na" and anion="O" (or their own choice).
     """
 
-    def __init__(self, approx, ptable, cation="Na", anion="O"):
+    def __init__(self, approx, ptable, cation="Na", anion="O", ionic_radius_unit="pm"):
         super().__init__(approx, ptable)
         self.cation = cation
         self.anion = anion
+        self.ionic_radius_unit = ionic_radius_unit
 
     # --------- TM ionic potential ---------
     def TM_weighted_ionic_pot(self, elems):
         total = 0.0
         for el, ox, qty in elems:
             if el not in (self.cation, self.anion):
-                total += lookup_ionic_radius(el, ox) * qty
+                total += lookup_ionic_radius(
+                    el,
+                    ox,
+                    unit=self.ionic_radius_unit,
+                ) * qty
         return total
 
     # --------- Cation / Anion ionic potentials ---------
@@ -33,9 +38,17 @@ class TransitionMetalPotentialModule(FeatureModule):
 
         for el, ox, qty in elems:
             if el == self.cation:
-                cat_pot += lookup_ionic_radius(el, ox) * qty
+                cat_pot += lookup_ionic_radius(
+                    el,
+                    ox,
+                    unit=self.ionic_radius_unit,
+                ) * qty
             elif el == self.anion:
-                an_pot += lookup_ionic_radius(el, ox) * qty
+                an_pot += lookup_ionic_radius(
+                    el,
+                    ox,
+                    unit=self.ionic_radius_unit,
+                ) * qty
 
         return cat_pot, an_pot
 
@@ -46,7 +59,12 @@ class TransitionMetalPotentialModule(FeatureModule):
 
         for el, ox, qty in elems:
             if el not in (self.cation, self.anion):
-                r = lookup_ionic_radius(el, ox, default=0.0)
+                r = lookup_ionic_radius(
+                    el,
+                    ox,
+                    default=0.0,
+                    unit=self.ionic_radius_unit,
+                )
                 if r:
                     weighted += r * qty
                     total_qty += qty

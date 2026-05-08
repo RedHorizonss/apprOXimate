@@ -15,6 +15,8 @@ class MaterialFeatureExtractor:
         enable_tm_potential=False,
         tm_cation="Na",
         tm_anion="O",
+        ionic_radius_unit="pm",
+        element_property_names=None,
     ):
         """
         Args:
@@ -25,11 +27,16 @@ class MaterialFeatureExtractor:
             enable_tm_potential: enable TM-specific feature module?
             tm_cation: TM module cation symbol
             tm_anion: TM module anion symbol
+            ionic_radius_unit: "pm" or "angstrom" for ionic-radius-based features
+            element_property_names: optional list of elemental property names. Use
+                None for defaults, or an empty list to skip ElementPropertyModule.
         """
 
         self.approx = approx
         self.ptable = ptable
         self.mode = mode
+        self.ionic_radius_unit = ionic_radius_unit
+        self.element_property_names = element_property_names
         self.modules = []
 
         # Load modules dynamically
@@ -37,6 +44,9 @@ class MaterialFeatureExtractor:
 
             # Skip TM module unless enabled
             if name == "TransitionMetalPotentialModule" and not enable_tm_potential:
+                continue
+
+            if name == "ElementPropertyModule" and element_property_names == []:
                 continue
 
             # If user specified a custom list of modules
@@ -50,6 +60,19 @@ class MaterialFeatureExtractor:
                     ptable,
                     cation=tm_cation,
                     anion=tm_anion,
+                    ionic_radius_unit=ionic_radius_unit,
+                )
+            elif name == "ElementPropertyModule":
+                module = ModuleClass(
+                    approx,
+                    ptable,
+                    property_names=element_property_names,
+                )
+            elif name in {"IonicRadiusModule", "ElectronegativityModule"}:
+                module = ModuleClass(
+                    approx,
+                    ptable,
+                    ionic_radius_unit=ionic_radius_unit,
                 )
             else:
                 module = ModuleClass(approx, ptable)

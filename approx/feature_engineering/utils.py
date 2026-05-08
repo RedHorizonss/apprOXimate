@@ -3,6 +3,16 @@ from functools import lru_cache
 import warnings
 from pymatgen.core import Element, Species
 
+RADIUS_UNIT_ALIASES = {
+    "pm": "pm",
+    "picometer": "pm",
+    "picometers": "pm",
+    "angstrom": "angstrom",
+    "angstroms": "angstrom",
+    "ang": "angstrom",
+    "a": "angstrom",
+}
+
 def weighted_average(element_list, value_fn):
     """
     element_list: [(element, ox, qty)]
@@ -38,6 +48,26 @@ def _radius_to_pm(value):
 
     return numeric
 
+def _normalize_radius_unit(unit):
+    try:
+        normalized = RADIUS_UNIT_ALIASES[str(unit).strip().lower()]
+    except KeyError as exc:
+        valid = ", ".join(sorted(RADIUS_UNIT_ALIASES))
+        raise ValueError(f"radius unit must be one of: {valid}") from exc
+
+    return normalized
+
+def convert_radius_from_pm(value, unit="pm"):
+    unit = _normalize_radius_unit(unit)
+    value = float(value)
+
+    if unit == "pm":
+        return value
+    if unit == "angstrom":
+        return value / 100.0
+
+    raise ValueError(f"Unsupported radius unit: {unit}")
+
 @lru_cache(maxsize=512)
 def _lookup_ionic_radius_cached(element, ox):
     """
@@ -72,11 +102,11 @@ def _lookup_ionic_radius_cached(element, ox):
 
     return None
 
-def lookup_ionic_radius(element, ox, default=0.0):
+def lookup_ionic_radius(element, ox, default=0.0, unit="pm"):
     value = _lookup_ionic_radius_cached(element, ox)
     if value is None:
-        return float(default)
-    return float(value)
+        value = float(default)
+    return convert_radius_from_pm(value, unit=unit)
 
     
 

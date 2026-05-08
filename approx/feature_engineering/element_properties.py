@@ -1,24 +1,8 @@
 from dataclasses import dataclass
 from math import isnan
 
-
 METALLOID_SYMBOLS = {"B", "Si", "Ge", "As", "Sb", "Te", "Po"}
 NONMETAL_SYMBOLS = {"H","C", "N", "O", "P", "S", "Se", "F", "Cl", "Br", "I","At","He","Ne","Ar","Kr","Xe","Rn","Og"}
-
-FAMILY_CODES = {
-    "alkali_metal": 1.0,
-    "alkaline_earth_metal": 2.0,
-    "transition_metal": 3.0,
-    "post_transition_metal": 4.0,
-    "metalloid": 5.0,
-    "nonmetal": 6.0,
-    "halogen": 7.0,
-    "noble_gas": 8.0,
-    "lanthanoid": 9.0,
-    "actinoid": 10.0,
-    "unknown": 0.0,
-}
-
 
 @dataclass(frozen=True)
 class PropertySpec:
@@ -34,7 +18,6 @@ PROPERTY_SPECS = {
     ),
     "Period": PropertySpec(column_candidates=("period",)),
     "group": PropertySpec(column_candidates=("group_id", "group")),
-    "families": PropertySpec(helper="families"),
     "Metal": PropertySpec(helper="metal"),
     "Nonmetal": PropertySpec(helper="nonmetal"),
     "Metalloid": PropertySpec(helper="metalloid"),
@@ -144,38 +127,7 @@ def _is_metal(symbol, row):
     return False
 
 
-def _family_code(symbol, row):
-    if _is_metalloid(symbol, row):
-        return FAMILY_CODES["metalloid"]
-    if _is_nonmetal(symbol, row):
-        group_id = _group_id(row)
-        if group_id == 17:
-            return FAMILY_CODES["halogen"]
-        if group_id == 18:
-            return FAMILY_CODES["noble_gas"]
-        return FAMILY_CODES["nonmetal"]
-
-    atomic_number = int(_coerce_float(_first_present(row, ("atomic_number",)), 0.0))
-    group_id = _group_id(row)
-
-    if group_id == 1 and symbol != "H":
-        return FAMILY_CODES["alkali_metal"]
-    if group_id == 2:
-        return FAMILY_CODES["alkaline_earth_metal"]
-    if 3 <= group_id <= 12:
-        return FAMILY_CODES["transition_metal"]
-    if 57 <= atomic_number <= 71:
-        return FAMILY_CODES["lanthanoid"]
-    if 89 <= atomic_number <= 103:
-        return FAMILY_CODES["actinoid"]
-    if _is_metal(symbol, row):
-        return FAMILY_CODES["post_transition_metal"]
-
-    return FAMILY_CODES["unknown"]
-
-
 HELPERS = {
-    "families": _family_code,
     "metal": lambda symbol, row: 1.0 if _is_metal(symbol, row) else 0.0,
     "nonmetal": lambda symbol, row: 1.0 if _is_nonmetal(symbol, row) else 0.0,
     "metalloid": lambda symbol, row: 1.0 if _is_metalloid(symbol, row) else 0.0,

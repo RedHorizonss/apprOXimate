@@ -8,13 +8,21 @@ from .utils import lookup_ionic_radius
 
 @register_feature
 class IonicRadiusModule(FeatureModule):
+    def __init__(self, approx, ptable, ionic_radius_unit="pm"):
+        super().__init__(approx, ptable)
+        self.ionic_radius_unit = ionic_radius_unit
 
     def _expand_group(self, elems, prefix):
         values = []
         weights = []
 
         for el, ox, qty in elems:
-            r = lookup_ionic_radius(el, ox, default=100.0)
+            r = lookup_ionic_radius(
+                el,
+                ox,
+                default=100.0,
+                unit=self.ionic_radius_unit,
+            )
             values.append(r)
             weights.append(qty)
 
